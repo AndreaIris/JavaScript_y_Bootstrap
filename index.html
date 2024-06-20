@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultas para Estudio Jurídico</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .custom-input {
+            color: blue;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: lightgray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Estudio Jurídico</a>
+    </nav>
+    <div class="container">
+        <h1>Envíe su consulta</h1>
+        <form id="consultaForm">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control custom-input" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control custom-input" id="email" placeholder="Ingrese su email">
+            </div>
+            <div class="form-group">
+                <label for="consulta">Consulta</label>
+                <textarea class="form-control custom-input" id="consulta" rows="3" placeholder="Ingrese su consulta"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    <div class="footer">
+        <p>Estudio Jurídico - Todos los derechos reservados</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+        $("#consultaForm").submit(function(event) {
+            event.preventDefault();
+            alert("Su consulta ha sido enviada. Nos pondremos en contacto con usted a la brevedad.");
+        });
+    </script>
+</body>
+</html>
